@@ -9,6 +9,14 @@
 </head>
 <body>
     
+    <main data-router-wrapper>
+        <div data-router-view="home">
+            <section>
+                <img src="<%= require('../assets/img/cat.jpeg') %>" width="500px" height="auto" alt="cat" />
+                <div class="test"></div>
+            </section>
+        </div>
+    </main>
 
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
