@@ -1,13 +1,9 @@
 div {
-    background: red;
-}
-
-body {
-    color: red;
+    background: blue;
 }
 
 .test {
     height: 100vh;
     width: 100vw;
-    background: url('./assets/img/settings.png');
+    background: url("./assets/img/settings.png");
 }

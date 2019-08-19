@@ -1,5 +1,4 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
@@ -12,12 +11,9 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'js/[name].[chunkhash].js'
+        filename: process.env === 'production' ? '[name].[chunkhash:9].js' : '[name].[hash:9].js'
     },
-    target: 'node',
-    externals: [
-        nodeExternals()
-    ],
+    target: 'web',
     module: {
         rules: [
             {
@@ -48,7 +44,6 @@ module.exports = {
                                 progressive: true,
                                 quality: 90
                             },
-                            // optipng.enabled: false will disable optipng
                             optipng: {
                                 enabled: false,
                             },
@@ -64,7 +59,6 @@ module.exports = {
                             svgo: {
 
                             },
-                            // the webp option will enable WEBP
                             webp: {
                                 quality: 100,
                                 sharpness: 0,
@@ -78,10 +72,18 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        port: 3000,
+        stats: {
+            children: false,
+            maxModules: 0
+        }
+    },
+    devtool: 'source-map',
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].[contenthash].css'
+            filename: '[name].[contenthash:9].css'
         }),
         new HtmlWebpackPlugin({
             inject: false,
