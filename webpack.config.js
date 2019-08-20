@@ -136,9 +136,12 @@ module.exports = {
             after: {
                 test: [
                     {
-                        folder: 'build/favicon',
+                        folder: process.env.npm_lifecycle_event === 'build' ? 'build/favicon' : '',
                         method: (filePath) => {
-                            return new RegExp(/\.webp$/, 'm').test(filePath);
+                            if (process.env.npm_lifecycle_event === 'build') {
+                                return new RegExp(/\.webp$/, 'm').test(filePath);
+                            }
+                            return '';
                         }
                     }
                 ]
