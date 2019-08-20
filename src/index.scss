@@ -1,5 +1,15 @@
+@import './assets/css/reset';
+
+@import './assets/fonts/fonts';
+
 div {
     background: blue;
+
+    h1 {
+        color: white;
+        font-family: $livvic;
+    }
+
 }
 
 .test {
