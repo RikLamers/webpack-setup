@@ -1,0 +1,54 @@
+// Variables
+
+$livvic: 'Livvic';
+$livvic--bolditalic: 'Livvic Bold Italic';
+$livvic--bold: 'Livvic Bold';
+$livvic--lightitalic: 'Livvic Light Italic';
+$livvic--light: 'Livvic Light';
+
+// Actual css
+
+@font-face {
+    font-family: $livvic;
+    src: url('./assets/fonts/Livvic/Regular/Livvic-Regular.woff2') format('woff2'),
+        url('./assets/fonts/Livvic/Regular/Livvic-Regular.woff') format('woff'),
+        url('./assets/fonts/Livvic/Regular/Livvic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $livvic--bolditalic;
+    src: url('./assets/fonts/Livvic/Bold/Livvic-BoldItalic.woff2') format('woff2'),
+        url('./assets/fonts/Livvic/Bold/Livvic-BoldItalic.woff') format('woff'),
+        url('./assets/fonts/Livvic/Bold/Livvic-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: $livvic--bold;
+    src: url('./assets/fonts/Livvic/Bold/Livvic-Bold.woff2') format('woff2'),
+        url('./assets/fonts/Livvic/Bold/Livvic-Bold.woff') format('woff'),
+        url('./assets/fonts/Livvic/Bold/Livvic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $livvic--lightitalic;
+    src: url('./assets/fonts/Livvic/Light/Livvic-LightItalic.woff2') format('woff2'),
+        url('./assets/fonts/Livvic/Light/Livvic-LightItalic.woff') format('woff'),
+        url('./assets/fonts/Livvic/Light/Livvic-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: $livvic--light;
+    src: url('./assets/fonts/Livvic/Light/Livvic-Light.woff2') format('woff2'),
+        url('./assets/fonts/Livvic/Light/Livvic-Light.woff') format('woff'),
+        url('./assets/fonts/Livvic/Light/Livvic-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}

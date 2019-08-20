@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>" />
+</head>
+<body>
+    
+    <main data-router-wrapper>
+        <div data-router-view="home">
+            <section>
+                <img src="<%= require('../assets/img/cat.jpeg') %>" width="500px" height="auto" alt="cat" />
+                <div class="test"></div>
+                <h1>HOI</h1>
+                <p>fbehfbenfjenjfe</p>
+            </section>
+        </div>
+    </main>
+
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>
