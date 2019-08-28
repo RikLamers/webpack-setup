@@ -9,7 +9,8 @@ const RemovePlugin = require('remove-files-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: './src/index.js'
+        main: ['./src/index.js'],
+        thirdPartyBundle: ['./src/vendor.js']
     },
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -60,13 +61,6 @@ module.exports = {
                             },
                             svgo: {
 
-                            },
-                            webp: {
-                                quality: 100,
-                                sharpness: 0,
-                                method: 5,
-                                metadata: 'none',
-                                enabled: true
                             }
                         }
                     }
